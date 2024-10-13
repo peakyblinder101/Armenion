@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.cancel-button {
+    background: #dc3545; /* Red color for cancel button */
+}
+
+.cancel-button:hover {
+    background: #c82333; /* Darker red on hover */
+}
+
+p {
+    color: red;
+    text-align: center;
+}
+
+#barcode-scanner {
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.sidebar button {
+    margin: 5px 0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.recent-scans-container {
+    margin-top: 10px;
+    padding: 10px;
+    background: #e9ecef; /* Light gray background */
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 5px;
+    max-height: 150px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.recent-scan-item {
+    padding: 8px; /* Increased padding for better clickability */
+    border-bottom: 1px solid #ced4da; /* Divider between items */
+}
+
+.recent-scan-item:last-child {
+    border-bottom: none; /* Remove last item border */
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.checkbox-container label {
+    display: flex; /* Make the label a flex container */
+    align-items: center; /* Center the checkbox and text vertically */
+    height: 180px;
+    width: 110px; /* Allow the width to adjust based on content */
+    margin-top: 10px;
+    margin-right: 10px; /* Space between checkboxes */
+    margin-left: 10px;
+    margin-bottom: 10px; /* Space below each row */
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%; /* Sidebar takes full width on small screens */
+    }
+    .content {
+        padding: 10px; /* Reduce padding for better spacing */
+    }
+}
